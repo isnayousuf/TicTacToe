@@ -47,3 +47,42 @@ nav ul {
     background-color: rgb(170, 117, 175);
     
 }
+.gameInfo {
+    padding: 0 30px;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+#heading{
+    font-size: 1.5rem;
+}
+#reset {
+    margin: 0 20px;
+    padding: 3px 5px;
+    background-color: green;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 2px solid green;
+    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    font-weight: bolder;
+
+}
+.imgbox img{
+    width: 0;
+    transition: width 2s ease-in-out;
+}
+.br-0 {
+    border-right: 0;
+}
+.bl-0 {
+    border-left: 0;
+}
+.bt-0 {
+    border-top: 0;
+}
+.bb-0 {
+    border-bottom: 0;
+}
+.info {
+    font-size: 1.5rem;
+}
+
+
