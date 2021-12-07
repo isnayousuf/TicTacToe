@@ -85,4 +85,23 @@ nav ul {
     font-size: 1.5rem;
 }
 
+@media screen and (max-width: 600px){
+    .gamecontainer {
+        flex-wrap: wrap;
+    }
+    .gameInfo {
+        margin-top: 40px;
+    }
+    .container{
+        grid-template-columns: repeat(3, 20vw);
+        grid-template-rows: repeat(3, 20vw);
+
+    }
+    #heading{
+        font-size: 1.5rem;
+    }
+    
+}
+
+
 

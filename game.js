@@ -1,7 +1,5 @@
-console.log("Welcome to the game");
-
-let audioTurn = new Audio("/js_projects/ticTacToe/add.mp3")
-let gameover = new Audio("/js_projects/ticTacToe/gameover.mp3")
+let audioTurn = new Audio("add.mp3")
+let gameover = new Audio("gameover.mp3")
 let turn = "X";
 let isgameover = false;
 
@@ -10,22 +8,8 @@ const changeTurn = () => {
 
     return turn === "X" ? "0" : "X"
 }
-let boxes = document.getElementsByClassName("box");
-Array.from(boxes).forEach(element => {
-     let boxtext = element.querySelector(' .boxtext ');
-     element.addEventListener('click', ()=> {
-         if(boxtext.innerText === '') {
-             boxtext.innerText = turn;
-             turn = changeTurn();   //to get turn of each
-             audioTurn.play();
-             checkWin();
-             if(!isgameover) {
-             document.getElementsByClassName("info")[0].innerText = "Turn for " +turn;
-         }
-        }
-     });
-});
 
+//function to check who wins
 
 const checkWin = () => {
     //check logic of wining by knowing position of x and 0 
@@ -40,13 +24,15 @@ const checkWin = () => {
          [1,4,7],
          [2,5,8]
     ]
+    //wins contains all the situactions of wining the game here
    wins.forEach ( e => {
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && 
         (boxtext[e[2]].innerText === boxtext[ e[1]].innerText) &&
         (boxtext[ e[0]].innerText !== '') ){
             document.querySelector('.info').innerText = boxtext[ e[0]].innerText + " has won the game " ;
             isgameover = true;
-            gameover.play();
+            gameover.play();          
+            //On wining the game getting the gif for g-congratulating the winner
             document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "150px"
         }
    })
@@ -64,7 +50,7 @@ Array.from(boxes).forEach(element => {
              audioTurn.play();
              checkWin();
              if(!isgameover) {
-             document.getElementsByClassName("info")[0].innerText = "Turn for " +turn;
+             document.getElementsByClassName("info")[0].innerText = "Turn for " +turn;   //changing turns of players
          }
         }
      });
