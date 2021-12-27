@@ -25,7 +25,7 @@ const checkWin = () => {
          [2,5,8]
     ]
     //wins contains all the situactions of wining the game here
-   wins.forEach ( e => {
+    wins.forEach ( e => {
         if((boxtext[e[0]].innerText === boxtext[e[1]].innerText) && 
         (boxtext[e[2]].innerText === boxtext[ e[1]].innerText) &&
         (boxtext[ e[0]].innerText !== '') ){
@@ -33,10 +33,12 @@ const checkWin = () => {
             isgameover = true;
             gameover.play();          
             //On wining the game getting the gif for g-congratulating the winner
-            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "150px"
+            document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "250px"
+          
         }
-   })
-}
+    })
+    }
+    
 
 //Main logic to work the game
  
@@ -46,6 +48,7 @@ Array.from(boxes).forEach(element => {
      element.addEventListener('click', ()=> {
          if(boxtext.innerText === '') {
              boxtext.innerText = turn;
+             boxtext.style.color = "blue";
              turn = changeTurn();   //to get turn of each
              audioTurn.play();
              checkWin();
@@ -70,7 +73,6 @@ reset.addEventListener( 'click', ()=> {
          document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px"
         
 });
-
 
 
 

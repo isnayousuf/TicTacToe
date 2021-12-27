@@ -3,11 +3,10 @@
     padding: 0;
 }
 nav{
-    
     height: 4rem;
     background-color: black;
     color: coral;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Itim', cursive;
     font-weight: bolder;
     font-size: 25px;
     display: flex;
@@ -15,28 +14,29 @@ nav{
     justify-content: center;
     padding: 10px;
 }
+
 nav ul {
     list-style-type: none;
 }
+
 .gamecontainer{
         width: 100vw;
-        height: 75vh;;
+        height: 90vh;;
         background-color: coral;
-       
         padding: 5px;
         display: flex;
         justify-content: center;
         align-items: center;       
 }
 .container {
+    margin: 0;
     display: grid;
     grid-template-columns: repeat(3, 10vw);
     grid-template-rows: repeat(3, 10vw);
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Itim', cursive;
 }
 .box{
-    border: 2px solid black;
-    
+    border: 4px solid black;
     font-size: 7vw;
     display: flex;
     justify-content: center;
@@ -44,24 +44,48 @@ nav ul {
 }
 .box:hover {
     cursor: pointer;
-    background-color: rgb(170, 117, 175);
+    background-color: rgb(171, 151, 173);
     
 }
 .gameInfo {
+    width: 20vw;
+    height: 40vh;
     padding: 0 30px;
-    font-family: 'Baloo Bhaijaan 2', cursive;
+    font-family: 'Roboto Mono', monospace;
 }
+
 #heading{
     font-size: 1.5rem;
 }
+#main-content {
+  
+    width: 43vw;
+    height: 20vh;
+}
+.info {
+    width: 40vw;
+    font-family: 'Itim', cursive;
+    font-weight: 900;
+    font-size: 2rem;
+    color: rgb(20, 67, 155);
+    margin-left: 2rem;
+    margin-right: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+
+   
+}
 #reset {
-    margin: 0 20px;
+    width: 7rem;
+    height: 4rem;
+    margin: 2rem 1rem 0 1rem;
     padding: 3px 5px;
     background-color: green;
     border-radius: 5px;
     cursor: pointer;
     border: 2px solid green;
-    font-family: 'Baloo Bhaijaan 2', sans-serif;
+    font-size: 1.5rem;
+    font-family: 'Roboto Mono', monospace;
     font-weight: bolder;
 
 }
@@ -81,9 +105,7 @@ nav ul {
 .bb-0 {
     border-bottom: 0;
 }
-.info {
-    font-size: 1.5rem;
-}
+
 
 @media screen and (max-width: 600px){
     .gamecontainer {
